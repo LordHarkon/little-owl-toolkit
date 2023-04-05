@@ -5,7 +5,7 @@ description = "Little Owl's Toolkit is an app for developers of all kinds. It's 
 authors = ["Hooshu"]
 license = "MIT"
 repository = ""
-edition = "2023"
+edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
