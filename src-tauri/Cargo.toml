@@ -1,0 +1,23 @@
+[package]
+name = "little-owl-toolkit"
+version = "1.0.0"
+description = "Little Owl's Toolkit is an app for developers of all kinds. It's a collection of tools such as base64 encryption/decryption, JSON formatting, QR code generation, and more."
+authors = ["Hooshu"]
+license = "MIT"
+repository = ""
+edition = "2023"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-build = { version = "1.2", features = [] }
+
+[dependencies]
+tauri = { version = "1.2", features = ["shell-open"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[features]
+# this feature is used for production builds or when `devPath` points to the filesystem
+# DO NOT REMOVE!!
+custom-protocol = ["tauri/custom-protocol"]
