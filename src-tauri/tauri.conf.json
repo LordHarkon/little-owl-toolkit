@@ -7,8 +7,8 @@
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "dev-tools-tauri",
-    "version": "0.0.0"
+    "productName": "little-owl-toolkit",
+    "version": "1.0.0"
   },
   "tauri": {
     "allowlist": {
@@ -16,18 +16,26 @@
       "shell": {
         "all": false,
         "open": true
+      },
+      "fs": {
+        "all": true,
+        "scope": ["$APP/*", "$DESKTOP/*"]
+      },
+      "path": {
+        "all": true
+      },
+      "clipboard": {
+        "all": true
+      },
+      "window": {
+        "all": false,
+        "setAlwaysOnTop": true
       }
     },
     "bundle": {
       "active": true,
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ],
-      "identifier": "com.tauri.dev",
+      "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
+      "identifier": "com.hooshu.toolkit",
       "targets": "all"
     },
     "security": {
@@ -40,7 +48,7 @@
       {
         "fullscreen": false,
         "resizable": true,
-        "title": "dev-tools-tauri",
+        "title": "Little Owl's Toolkit",
         "width": 800,
         "height": 600
       }
